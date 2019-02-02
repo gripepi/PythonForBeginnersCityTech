@@ -44,6 +44,7 @@ copy_of_x = x[:] # [-1, 1, 1, ..., 9]
 # check membership
 1 in [1, 2, 3] # True
 0 in [1, 2, 3] # False
+# N.B. same operations available for str type (strings)
 
 # concatenate lists together
 x = [1, 2, 3]
