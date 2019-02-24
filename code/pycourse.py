@@ -6,14 +6,63 @@ type(integer) # <class 'int'>
 floating_number = 3.14
 type(floating_number) # <class 'float'>
 
-string1 = "I am a string"
+# STRINGs
+
+double_quated_string = "I am a string"
 type(string1) # <class 'str'>
 
-string2 = 'I am a string too'
+single_quated_string = 'I am a string too'
 type(string2) # <class 'str'>
 
-char = 'g'
-type(char) # <class 'str'>
+char = 'g' 
+type(char) # <class 'str'>, char does not exist
+
+# backslashes for special characters 
+tab_string = "\t" # tab character
+len(tab_string) # is 1
+
+# if you want backslashes as backslashes, create raw strings using r
+not_tab_string = r"\t" # represents the character '\' and 't'
+len(not_tab_string) # is 2
+
+# can create multiline strings using triple-double quote ("""...""")
+multi_line_string = """This is the first line.
+and this is the second line
+and this is the third line"""
+
+# FUNCTIONS
+# functions are first-class, which means that we can assign them to variables
+
+def double(x):
+	return x*2
+
+def apply_to_one(f):
+	return f(1)
+
+my_double = double # refers to previously defined functions
+x = apply_to_one(double) # equlas 2
+
+# anonympous functions with lambda (it can be assigne to variable but always assign to functions)
+y = apply_to_one(lambda x : x+4) # equals 5
+# or #
+another_double = lambda x : x*2 # don't do this
+def another_double(x):
+	return lambda x : x*2 # do this instead
+
+# default arguments can also assigned to funcrions
+def my_print(message="Hello, World!"):
+	print(message)
+
+my_print("Hello, Python!") # prints 'Hello, Python!'
+my_print() # prints 'Hello, World!'
+
+# can specify arguments by name
+def subtract(a=0, b=0):
+	return a-b
+
+subtract(10, 5) # returns 5
+subtract(0, 5) # returns -5
+subtract(b=5) # same as previous
 
 # LISTS
 # ordered collection - like an array but with added functionalities
@@ -78,7 +127,7 @@ my_list[1] = 3 # my_list is now [1, 3]
 try:
 	my_tuple[1] = 3
 except TypeError:
-	print("cannot modify tuple")
+	print("Cannot modify tuple!")
 
 # tuples are a way to return multiple values from a function
 def sum_and_product(x, y):
