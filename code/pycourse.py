@@ -64,6 +64,13 @@ subtract(10, 5) # returns 5
 subtract(0, 5) # returns -5
 subtract(b=5) # same as previous
 
+# EXCEPTIONS
+
+try:
+	print(0/0)
+except ZeroDivisionError:
+	print("cannot divide by zero")
+
 # LISTS
 # ordered collection - like an array but with added functionalities
 
@@ -189,3 +196,60 @@ student_items = student.items() # list of (key, value) tuples
 "user" in student_keys # True, but uses a slow list in
 "user" in student # more 'Pythonic', uses faster dict in
 "gripepi" in student_values # True
+
+# SETS
+# collection of distinct elements
+
+s = set()
+s.add(1) # s is now { 1 }
+s.add(2) # s is now { 1, 2 }
+s.add(2) # s is now { 1, 2 }
+x = len(s) # 2
+y = 2 in s # True
+z = 3 in s # False
+
+# in is a very fast opereation on sets (hundreds_of_other_word not declare but imagine it contains 100 words)
+stopwords_list = ["a", "an", "at"] + hundreds_of_other_word + ["yet", "you"]
+
+"zip" in stopwords_list # False, but have to check every element
+
+stopwords_set = set(stopwords_list)
+"zip" in stopwords_set # very fast to check
+
+# second reason is to find the DISTINCT elements in a collection
+item_list = [1, 2, 3, 1, 2, 3]
+num_items = len(item_list) # 6
+item_set = set(item_list) # { 1, 2, 3 }
+num_distinct_items = len(item_set) # 3
+distinct_item_list = list(item_set) # [1, 2, 3]
+
+# CONTROL FLOW
+
+# if statements
+if 1 > 2:
+	message = "if only 1 were greater than two..."
+elif 1 > 3:
+	message = "elif stands for 'else if'"
+else:
+	message = "when all else fails use else (if you want to)"
+
+# ternary if-then-else (all on one line)
+parity = "even" if x%2 == 0 else "odd"
+
+# while loop
+x = 0
+while x < 10:
+	print(x, "is less than 10")
+	x += 1
+
+# for and in loop
+for x in range(10):
+	print(x, "is less than 10")
+
+# for more complex logic, continue and break can be used
+for x in range(10):
+	if x == 3:
+		continue # go immediately to the next iteration
+	if x == 5:
+		break # quit the loop entirely
+	print(x) # 1, 2, 4
