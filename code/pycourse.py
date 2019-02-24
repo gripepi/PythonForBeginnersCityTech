@@ -1,5 +1,7 @@
 # N.B. We will be using python 3
 
+# BASIC DATA STRUCTURES
+
 integer = 7
 type(integer) # <class 'int'>
 
