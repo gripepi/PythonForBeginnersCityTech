@@ -8,7 +8,7 @@ type(integer) # <class 'int'>
 floating_number = 3.14
 type(floating_number) # <class 'float'>
 
-# STRINGs
+# STRINGS
 
 double_quated_string = "I am a string"
 type(string1) # <class 'str'>
