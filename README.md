@@ -12,6 +12,7 @@ We will go through python data structures, functions, exceptions and modules.
 You can download python from python.org but if you haven't installed python yet, I recommend instead to download Anaconda (https://www.anaconda.com/distribution/) as it includes the most useful libraries already.
 If you don't have Anaconda, make sure to install pip (https://pip.pypa.io/en/stable/installing/).
 We will use pithon 3.x during this workshop (version 2.7 also available online).
+I have crated a virtual python enviroment for you if you are not able to download python.
 
 ### Why Python?
 
